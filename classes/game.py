@@ -1,5 +1,6 @@
 import random
 
+
 class bcolours:
     HEADER = ' \033[95m'
     OKBLUE = ' \033[94m'
@@ -47,4 +48,26 @@ class Person:
     
     def get_max_mp(self):
         return self.maxmp
+    
+    def reduce_mp(self, cost):
+        self.mp -= cost
+    
+    def choose_action(self):
+        i = 1
+        print("Actions")
+        for item in self.actions:
+            print(str(i) + ":", item)
+            i += 1
+    
+    def choose_magic(self):
+        i = 1
+        
+        print("Magic")
+        for spell in self.magic:
+            print(str(i) + ":", spell.name, "(cost:", str(spell.cost) + ")" )
+            i += 1
+
+
+    
+
     
